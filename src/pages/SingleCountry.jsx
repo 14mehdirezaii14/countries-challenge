@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import CardCountries from "../components/CardCountries";
+import Loading from "../components/Loading";
 const SingleCountry = () => {
   const path = useLocation();
   //   console.log(s.pathname.replace('/',''));
@@ -25,19 +26,19 @@ const SingleCountry = () => {
     [select]
   );
   return (
-    <div className="container pt-5 mx-auto mt-5 h-100">
+    <div className="container py-5 px-2 mx-auto h-100">
       {select.countriesReducer.length !== 1 ? (
-        <div className="grid columns-1 text-center">Loading ...</div>
+        <div className="grid columns-1 text-center"><Loading /></div>
       ) : (
-        <div className="grid md:grid-cols-2  content-center  gap-5 sm:grid-cols-1">
+        <div className="grid md:grid-cols-2  content-center  gap-5 sm:grid-cols-1 sm:text-center">
           <div>
             <img
-              className="object-cover w-96"
+              className="object-cover rounded-md  min-w-full w-96"
               src={select.countriesReducer[0].flags.png}
               alt=""
             />
           </div>
-          <div className="text-left grid grid-cols-1 items-center h-100">
+          <div className="text-left  grid grid-cols-1 items-center h-100">
             <p>
               <b>name :</b>{" "}
               <span className="text-gray-500">

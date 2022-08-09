@@ -14,9 +14,9 @@ const Header = () => {
   return (
     <>
       <header className="shadow-lg shadow-slate-200 dark:shadow-slate-800 mb-5">
-        <div className="container mx-auto py-4">
-          <div className="row">
-            <div className="col-12">
+        <div className="container px-4 mx-auto py-4">
+          <div className="grid grid-cols-1">
+            <div>
               <Link to='/'>Where In The World</Link>
               <button
                 className="float-right"

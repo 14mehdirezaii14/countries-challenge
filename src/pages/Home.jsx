@@ -1,19 +1,20 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import CardCountries from "../components/CardCountries";
+import Loading from "../components/Loading";
 const Home = () => {
   let dispatch = useDispatch();
   let select = useSelector((state) => state);
   useEffect(() => {
-    console.log(select)
+    console.log(select);
     dispatch({ type: "FETCH_ALL_DATA" });
   }, []);
   return (
     <>
-      <div className="container mx-auto">
+      <div className="md:container px-2 mx-auto">
         <div className="grid md:grid-cols-4 gap-5 sm:grid-cols-12">
           {select.countriesReducer.length < 2 ? (
-            <div className="col-span-12 text-center">loading ...</div>
+            <Loading />
           ) : (
             select.countriesReducer.map((country, index) => {
               return <CardCountries country={country} key={index} />;
