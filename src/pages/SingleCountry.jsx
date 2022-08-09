@@ -6,7 +6,7 @@ const SingleCountry = () => {
   const path = useLocation();
   //   console.log(s.pathname.replace('/',''));
   let dispatch = useDispatch();
-  let select = useSelector((state) => state);
+  let select = useSelector((state) => state); 
   useEffect(() => {
     dispatch({
       type: "SAGA_GET_SINGLE_COUNTRY",
