@@ -12,7 +12,7 @@ const SingleCountry = () => {
       type: "SAGA_GET_SINGLE_COUNTRY",
       peyload: path.pathname.replace("/", ""),
     });
-    console.log(select);
+    console.log(select); 
     return () => {
       dispatch({ type: "EMPTY_LIST" });
     };
