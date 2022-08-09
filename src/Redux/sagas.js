@@ -22,7 +22,9 @@ function* sagaGetSingleCountry(action) {
     `https://restcountries.com/v2/name/${action.peyload}`
   ).then((res) => {
     data = res.data;
-  });
+  }).catch((err) => {
+    data = [{err:err.message}]
+  })
   yield put({ type: "GET_SINGLE_COUNTRY", peyload: data });
 }
 
