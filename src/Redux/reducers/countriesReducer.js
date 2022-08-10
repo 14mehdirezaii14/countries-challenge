@@ -8,6 +8,9 @@ export const countriesReducer = (state = initialState, action) => {
       return action.peyload;
     case "EMPTY_LIST":
       return state;
+    case "SEARCH":
+      
+      return action.peyload;
     default:
       return state;
   }
