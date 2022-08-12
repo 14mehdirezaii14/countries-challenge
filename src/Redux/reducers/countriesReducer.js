@@ -7,7 +7,7 @@ export const countriesReducer = (state = initialState, action) => {
     case "GET_SINGLE_COUNTRY":
       return action.peyload;
     case "EMPTY_LIST":
-      return state;
+      return [];
     case "SEARCH":
       
       return action.peyload;
