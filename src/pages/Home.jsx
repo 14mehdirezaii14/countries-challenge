@@ -1,14 +1,15 @@
-import { useEffect } from "react";
+import React, { useEffect, Suspense } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import CardCountries from "../components/CardCountries";
-import Loading from "../components/Loading";
-import Search from "../components/Search";
+const CardCountries = React.lazy(() => import("../components/CardCountries"));
+const Loading = React.lazy(() => import("../components/Loading"));
+const Search = React.lazy(() => import("../components/Search"));
 const Home = () => {
   let dispatch = useDispatch();
   let select = useSelector((state) => state);
   useEffect(() => {
     dispatch({ type: "FETCH_ALL_DATA" });
   }, []);
+
   return (
     <>
       <div className="md:container h-100 px-2 mx-auto">

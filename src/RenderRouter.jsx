@@ -1,7 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Home from "./pages/Home";
-// import Header from "./components/Header";
-// import SingleCountry from "./pages/SingleCountry";
 import React, { Suspense } from "react";
 const Loading = React.lazy(() => import("./components/Loading"));
 const Home = React.lazy(() => import("./pages/Home"));

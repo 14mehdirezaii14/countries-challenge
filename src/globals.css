@@ -682,6 +682,37 @@ video {
   border-width: 0;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.inset-1\/2 {
+  top: 50%;
+  right: 50%;
+  bottom: 50%;
+  left: 50%;
+}
+
+.left-52 {
+  left: 13rem;
+}
+
+.left-2\.5 {
+  left: 0.625rem;
+}
+
+.left-2 {
+  left: 0.5rem;
+}
+
+.left-5 {
+  left: 1.25rem;
+}
+
+.left-10 {
+  left: 2.5rem;
+}
+
 .col-span-12 {
   grid-column: span 12 / span 12;
 }
@@ -704,8 +735,17 @@ video {
   margin-right: auto;
 }
 
+.mx-52 {
+  margin-left: 13rem;
+  margin-right: 13rem;
+}
+
 .mb-5 {
   margin-bottom: 1.25rem;
+}
+
+.mt-52 {
+  margin-top: 13rem;
 }
 
 .mr-2 {

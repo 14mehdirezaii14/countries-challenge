@@ -1,7 +1,7 @@
 const Loading = () => {
   return (
-    <div className="col-span-12 items-center h-100">
-      <div role="status" className="text-center">
+    <div className="col-span-12 items-center content-center h-100">
+      <div role="status" className="text-center absolute inset-1/2">
         <svg
           className="inline mr-2 w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
           viewBox="0 0 100 101"
